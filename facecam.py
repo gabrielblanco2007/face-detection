@@ -16,6 +16,10 @@ while True:
     # Read the frame from the webcam
     ret, frame = cap.read()
 
+    # Check if the frame is empty
+    if frame is None:
+        break
+
     # Convert the frame to grayscale
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
